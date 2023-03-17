@@ -3,7 +3,7 @@ import { useState } from "react";
 export default function EditProfile() {
   let [firstName, setFirstName] = useState("Jane");
   let [lastName, setLastName] = useState("Jacobs");
-  let [editing, setEditing] = useState(true);
+  let [isEditing, setIsEditing] = useState(true);
 
   function handleNameChange(setter) {
     return (e) => {
@@ -12,10 +12,10 @@ export default function EditProfile() {
   }
 
   function handleEditButtonPress(e) {
-    setEditing(!editing);
+    setIsEditing(!isEditing);
   }
 
-  if (editing) {
+  if (isEditing) {
     return (
       <form>
         <label>
